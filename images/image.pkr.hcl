@@ -26,7 +26,7 @@ source "amazon-ebs" "example-east-1" {
   region        = "us-east-1"
   source_ami_filter {
     filters = {
-      name                = "ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"
+      name                = "ubuntu/images/*ubuntu-xenial-16.04-amd64-server-*"
       root-device-type    = "ebs"
       virtualization-type = "hvm"
     }
@@ -42,7 +42,7 @@ source "amazon-ebs" "example-east-2" {
   region        = "us-east-2"
   source_ami_filter {
     filters = {
-      name                = "ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"
+      name                = "ubuntu/images/*ubuntu-xenial-16.04-amd64-server-*"
       root-device-type    = "ebs"
       virtualization-type = "hvm"
     }
@@ -60,7 +60,7 @@ build {
     bucket_labels = {
       "owner"          = "platform-team"
       "os"             = "Ubuntu",
-      "ubuntu-version" = "Focal 20.04",
+      "ubuntu-version" = "Xenial 16.04",
     }
 
     build_labels = {
