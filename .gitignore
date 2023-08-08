@@ -1,0 +1,23 @@
+# Terraform state files #
+#########################
+*.tfstate
+*.tfstate.backup
+*.tfstate.*
+
+# Terraform provider files #
+###########################
+.terraform
+.terraform.lock.hcl
+terraform-branch*
+
+# Local .terraform directories #
+################################
+**/.terraform/*
+
+# .tfvars files #
+################
+*.tfvars
+
+# Local public key
+tf-packer
+tf-packer.pub
