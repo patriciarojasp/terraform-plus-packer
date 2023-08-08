@@ -96,7 +96,7 @@ data "hcp_packer_image" "ubuntu_us_east_1" {
 }
 
 resource "aws_instance" "web" {
-  ami                         = "ami-0e0448a9203705396" #Replace AMI here!!
+  ami                         = "ami-YOUR AMI HERE" #Replace AMI here!!
   instance_type               = "t2.micro"
   subnet_id                   = aws_subnet.subnet_public.id
   vpc_security_group_ids      = [aws_security_group.sg_22_80.id]

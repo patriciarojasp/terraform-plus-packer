@@ -17,7 +17,6 @@ variable "version" {
 
 locals { timestamp = regex_replace(timestamp(), "[- TZ:]", "") }
 
-
 # source blocks are generated from your builders; a source can be referenced in
 # build blocks. A build block runs provisioners and post-processors on a
 # source.
@@ -27,7 +26,7 @@ source "amazon-ebs" "example-east-1" {
   region        = "us-east-1"
   source_ami_filter {
     filters = {
-      name                = "ubuntu/images/*ubuntu-xenial-16.04-amd64-server-*"
+      name                = "ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"
       root-device-type    = "ebs"
       virtualization-type = "hvm"
     }
@@ -43,7 +42,7 @@ source "amazon-ebs" "example-east-2" {
   region        = "us-east-2"
   source_ami_filter {
     filters = {
-      name                = "ubuntu/images/*ubuntu-xenial-16.04-amd64-server-*"
+      name                = "ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"
       root-device-type    = "ebs"
       virtualization-type = "hvm"
     }
